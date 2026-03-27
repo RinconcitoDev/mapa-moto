@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Moto Map GPS</title>
+  <script src="https://unpkg.com/maplibre-gl@4.1.1/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@4.1.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/pmtiles@3.0.6/dist/pmtiles.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="distancia-info">0.00 km</div>
+
+  <button id="recenter" class="btn-side">🎯</button>
+  <button id="rule-btn" class="btn-side">📏</button>
+  <button id="trip-btn" class="btn-side">🏁</button>
+  <button id="poi-btn" class="btn-side" title="Mostrar lugares de interés">📍</button>
+
+  <div id="ui-container">
+    <div id="live-stats">
+      <div style="display:flex; justify-content: space-between; align-items: center;">
+        <span id="max-display" style="color:#00ff00; font-weight:bold; font-size:20px;">Máx: 0 km/h</span>
+        <span id="avg-display" style="color:#5dade2; font-size:14px; font-weight: bold;">Prom: 0 km/h</span>
+      </div>
+      <div id="coords-display" style="font-size:10px; color:#888; margin-top:8px; font-family: monospace;">GPS: Buscando
+        señal...</div>
+    </div>
+    <div id="history-panel">
+      <div id="history-header">
+        <strong>Historial de Tramos</strong>
+        <span id="toggle-icon">▼</span>
+      </div>
+      <div id="trip-list"></div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="map-logic.js"></script>
+</body>
+
+</html>

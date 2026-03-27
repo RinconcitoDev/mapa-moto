@@ -1,0 +1,20 @@
+# Dependencias (se instalan con pnpm install)
+node_modules/
+.pnpm-debug.log*
+
+# Archivos de Mapas Pesados (MANEJO LOCAL)
+# No subir a GitHub por límite de tamaño (100MB+)
+*.pmtiles
+
+# Datos de radares (si son privados o pesados)
+# radares.geojson
+
+# Archivos de sistema y logs
+.DS_Store
+Thumbs.db
+npm-debug.log*
+.env
+
+# Carpetas de compilación o temporales
+dist/
+.cache/

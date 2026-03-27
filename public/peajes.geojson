@@ -1,0 +1,2330 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-03-27T06:02:51Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/310741276",
+        "area": "yes",
+        "barrier": "toll_booth",
+        "building": "roof",
+        "building:levels": "2",
+        "layer": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -64.3050868,
+              -31.540304
+            ],
+            [
+              -64.3048259,
+              -31.5406424
+            ],
+            [
+              -64.3047834,
+              -31.5406186
+            ],
+            [
+              -64.3047319,
+              -31.5405897
+            ],
+            [
+              -64.3046913,
+              -31.540567
+            ],
+            [
+              -64.3049522,
+              -31.5402286
+            ],
+            [
+              -64.3049931,
+              -31.5402515
+            ],
+            [
+              -64.3050445,
+              -31.5402803
+            ],
+            [
+              -64.3050868,
+              -31.540304
+            ]
+          ]
+        ]
+      },
+      "id": "way/310741276"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1200694546",
+        "area": "yes",
+        "barrier": "toll_booth",
+        "building": "yes",
+        "layer": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -66.0321717,
+              -33.0889763
+            ],
+            [
+              -66.0321984,
+              -33.0889382
+            ],
+            [
+              -66.0323764,
+              -33.0890257
+            ],
+            [
+              -66.0323498,
+              -33.0890638
+            ],
+            [
+              -66.0321717,
+              -33.0889763
+            ]
+          ]
+        ]
+      },
+      "id": "way/1200694546"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1204454905",
+        "area": "yes",
+        "barrier": "toll_booth",
+        "building": "yes",
+        "building:levels": "1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -64.4141469,
+              -31.7352421
+            ],
+            [
+              -64.4141226,
+              -31.7352096
+            ],
+            [
+              -64.4141695,
+              -31.7351842
+            ],
+            [
+              -64.4141938,
+              -31.7352166
+            ],
+            [
+              -64.4141469,
+              -31.7352421
+            ]
+          ]
+        ]
+      },
+      "id": "way/1204454905"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/249488949",
+        "barrier": "toll_booth",
+        "name": "Peaje Sampacho Km 655"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.7756135,
+          -33.4241622
+        ]
+      },
+      "id": "node/249488949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/256990535",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Troncal Puerto San Martín",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7854796,
+          -32.6993604
+        ]
+      },
+      "id": "node/256990535"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/350659386",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2995023,
+          -31.3699527
+        ]
+      },
+      "id": "node/350659386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/350659572",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2997877,
+          -31.3702181
+        ]
+      },
+      "id": "node/350659572"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/492416498",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Troncal Puerto San Martín",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7856129,
+          -32.6994454
+        ]
+      },
+      "id": "node/492416498"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/503731719",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje Acceso San Lorenzo Sur",
+        "network": "Telepase",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7479472,
+          -32.7671908
+        ]
+      },
+      "id": "node/503731719"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/602268782",
+        "barrier": "toll_booth",
+        "fee": "$13 (20014/8)",
+        "name": "Peaje - Tunel Hernandarias"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5022049,
+          -31.7166221
+        ]
+      },
+      "id": "node/602268782"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/738432440",
+        "barrier": "toll_booth",
+        "name": "Peaje Pajas Blancas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2188764,
+          -31.3128117
+        ]
+      },
+      "id": "node/738432440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/747493910",
+        "barrier": "toll_booth",
+        "name": "Peaje Autopista Córdoba/Carlos Paz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.3123358,
+          -31.4369106
+        ]
+      },
+      "id": "node/747493910"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/747493925",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.3123729,
+          -31.4363778
+        ]
+      },
+      "id": "node/747493925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/810542632",
+        "barrier": "toll_booth",
+        "name": "Peaje Acceso Sauce Viejo",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.811065,
+          -31.6909631
+        ]
+      },
+      "id": "node/810542632"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/874674115",
+        "barrier": "toll_booth",
+        "operator": "Camino de las Sierras"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.3048573,
+          -31.5405307
+        ]
+      },
+      "id": "node/874674115"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/908198325",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.832047,
+          -31.473781
+        ]
+      },
+      "id": "node/908198325"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/993305825",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso San Lorenzo Norte",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7630365,
+          -32.7244592
+        ]
+      },
+      "id": "node/993305825"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1055479106",
+        "barrier": "toll_booth",
+        "name": "Peaje Desagüadero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.1234848,
+          -33.4117551
+        ]
+      },
+      "id": "node/1055479106"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1131593102",
+        "barrier": "toll_booth",
+        "name": "Peaje Monte Cristo",
+        "operator": "Caminos de las Sierras S.A",
+        "phone": "+54 0800-888-2847",
+        "website": "https://www.caminosdelassierras.com.ar/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.8749103,
+          -31.3278352
+        ]
+      },
+      "id": "node/1131593102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1131593493",
+        "barrier": "toll_booth",
+        "name": "Peaje Monte Cristo",
+        "operator": "Caminos de las Sierras S.A",
+        "phone": "+54 0800-888-2847",
+        "website": "https://www.caminosdelassierras.com.ar/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.8749646,
+          -31.3276934
+        ]
+      },
+      "id": "node/1131593493"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1270117615",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.9954135,
+          -31.5694307
+        ]
+      },
+      "id": "node/1270117615"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1295445978",
+        "barrier": "toll_booth",
+        "bicycle": "permissive",
+        "currency:ARS": "yes",
+        "foot": "no",
+        "horse": "no",
+        "motor_vehicle": "yes",
+        "operator": "Concesionario Vial N° 6",
+        "payment:cash": "yes",
+        "website": "https://www.corredorvial6.com.ar/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.1338992,
+          -33.3511533
+        ]
+      },
+      "id": "node/1295445978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1391802503",
+        "addr:milestone": "682",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "name": "Peaje R9 Toledo",
+        "operator": "Camino de las Sierras",
+        "payment:cash": "yes",
+        "website": "https://caminosdelassierras.com.ar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.9719616,
+          -31.5398827
+        ]
+      },
+      "id": "node/1391802503"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1391802504",
+        "addr:milestone": "682",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "name": "Peaje R9 Toledo",
+        "operator": "Camino de las Sierras",
+        "payment:cash": "yes",
+        "website": "https://caminosdelassierras.com.ar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.9721188,
+          -31.5400282
+        ]
+      },
+      "id": "node/1391802504"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1411400604",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.2270651,
+          -33.2541114
+        ]
+      },
+      "id": "node/1411400604"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1411862333",
+        "barrier": "toll_booth",
+        "name": "Peaje Los Puquios"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1964683,
+          -33.2713867
+        ]
+      },
+      "id": "node/1411862333"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1412966472",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1093849,
+          -33.3026529
+        ]
+      },
+      "id": "node/1412966472"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1413019223",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.0878073,
+          -33.0910084
+        ]
+      },
+      "id": "node/1413019223"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1557692638",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje RN9 - General Lagos",
+        "operator": "Corredores Viales",
+        "operator:type": "government",
+        "payment:telepase": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.578123,
+          -33.1288943
+        ]
+      },
+      "id": "node/1557692638"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1557692639",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje RN9 - General Lagos",
+        "operator": "Corredores Viales",
+        "operator:type": "government",
+        "payment:telepase": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5779806,
+          -33.1287719
+        ]
+      },
+      "id": "node/1557692639"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1599240751",
+        "access": "yes",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "fee": "yes",
+        "lanes": "5",
+        "name": "Peaje R9 Carcaraña",
+        "operator:type": "government",
+        "payment:cash": "yes",
+        "payment:telepase": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.1698186,
+          -32.8761676
+        ]
+      },
+      "id": "node/1599240751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1599240754",
+        "access": "yes",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "fee": "yes",
+        "lanes": "5",
+        "name": "Peaje R9 Carcaraña",
+        "operator:type": "government",
+        "payment:cash": "yes",
+        "payment:telepase": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.169921,
+          -32.8765691
+        ]
+      },
+      "id": "node/1599240754"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1600593986",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Isla La Deseada",
+        "operator": "Conexión Alto Delta",
+        "operator:type": "private",
+        "payment:telepase": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.6512458,
+          -32.8653707
+        ]
+      },
+      "id": "node/1600593986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1673308369",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso Villa La Ribera",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.824471,
+          -32.6363488
+        ]
+      },
+      "id": "node/1673308369"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1700549550",
+        "barrier": "toll_booth",
+        "name": "Peaje Pajas Blancas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2185927,
+          -31.3127024
+        ]
+      },
+      "id": "node/1700549550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1931258111",
+        "barrier": "toll_booth",
+        "name": "Peaje Troncal Sauce Viejo",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.8258978,
+          -31.7086359
+        ]
+      },
+      "id": "node/1931258111"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1931258115",
+        "barrier": "toll_booth",
+        "name": "Peaje Troncal Sauce Viejo",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.8257673,
+          -31.7086795
+        ]
+      },
+      "id": "node/1931258115"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2012998281",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.1640144,
+          -33.1196657
+        ]
+      },
+      "id": "node/2012998281"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2039350371",
+        "barrier": "toll_booth",
+        "name": "Peaje - Tunel Hernandarias"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5024305,
+          -31.7165645
+        ]
+      },
+      "id": "node/2039350371"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2101959034",
+        "barrier": "toll_booth",
+        "name": "Peaje Desagüadero"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.1147534,
+          -33.4129
+        ]
+      },
+      "id": "node/2101959034"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2196602287",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso San Lorenzo Centro",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.759,
+          -32.7480792
+        ]
+      },
+      "id": "node/2196602287"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2266484259",
+        "barrier": "toll_booth",
+        "bicycle": "no",
+        "fee": "yes",
+        "foot": "no",
+        "horse": "no",
+        "motor_vehicle": "yes",
+        "name": "Peaje Jesús Maria",
+        "operator": "Camino de las Sierras"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.1528855,
+          -31.1908171
+        ]
+      },
+      "id": "node/2266484259"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2313354389",
+        "barrier": "toll_booth",
+        "name": "Peaje Acceso Santo Tomé",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7954456,
+          -31.666606
+        ]
+      },
+      "id": "node/2313354389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2326309075",
+        "barrier": "toll_booth",
+        "name": "Estación de Peaje James Craik",
+        "operator": "Peaje Cincovial"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.3893387,
+          -32.1886332
+        ]
+      },
+      "id": "node/2326309075"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2326309080",
+        "barrier": "toll_booth",
+        "name": "Estación de Peaje James Craik",
+        "operator": "Peaje Cincovial"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -63.3895197,
+          -32.1887486
+        ]
+      },
+      "id": "node/2326309080"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2504224239",
+        "barrier": "toll_booth",
+        "fee": "yes",
+        "name": "Peaje La Paz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.5024522,
+          -33.4357994
+        ]
+      },
+      "id": "node/2504224239"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2504224240",
+        "barrier": "toll_booth",
+        "fee": "yes",
+        "name": "Peaje La Paz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.50241,
+          -33.4358854
+        ]
+      },
+      "id": "node/2504224240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2519016416",
+        "barrier": "toll_booth",
+        "name": "Peaje Los Puquios"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.1965361,
+          -33.2714619
+        ]
+      },
+      "id": "node/2519016416"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2519324724",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.2269544,
+          -33.2541152
+        ]
+      },
+      "id": "node/2519324724"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2616222360",
+        "barrier": "toll_booth",
+        "name": "Peaje - Tunel Hernandarias"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5120529,
+          -31.6873408
+        ]
+      },
+      "id": "node/2616222360"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2616222364",
+        "barrier": "toll_booth",
+        "name": "Peaje - Tunel Hernandarias"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5120478,
+          -31.6875058
+        ]
+      },
+      "id": "node/2616222364"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2625122357",
+        "barrier": "toll_booth",
+        "name": "Peaje Devoto"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -62.2053673,
+          -31.410869
+        ]
+      },
+      "id": "node/2625122357"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2710898847",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Isla La Deseada",
+        "operator": "Conexión Alto Delta",
+        "operator:type": "private",
+        "payment:telepase": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.6512196,
+          -32.8655094
+        ]
+      },
+      "id": "node/2710898847"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2880807071",
+        "barrier": "toll_booth",
+        "name": "Peaje Santa Rosa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.1747954,
+          -32.3613724
+        ]
+      },
+      "id": "node/2880807071"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2961981776",
+        "barrier": "toll_booth",
+        "name": "Estación de Peaje \"San Vicente\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.5670889,
+          -31.792153
+        ]
+      },
+      "id": "node/2961981776"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2961981783",
+        "barrier": "toll_booth",
+        "name": "Estación de Peaje \"San Vicente\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.5672009,
+          -31.792121
+        ]
+      },
+      "id": "node/2961981783"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2994040760",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso San Lorenzo Sur",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7480941,
+          -32.7671681
+        ]
+      },
+      "id": "node/2994040760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3051113582",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso Puerto San Martín",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7860244,
+          -32.6997402
+        ]
+      },
+      "id": "node/3051113582"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3060312209",
+        "barrier": "toll_booth",
+        "operator": "Camino de las Sierras"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.3049728,
+          -31.5403534
+        ]
+      },
+      "id": "node/3060312209"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3371244619",
+        "barrier": "toll_booth",
+        "name": "Peaje Santa Rosa"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.1749829,
+          -32.3613632
+        ]
+      },
+      "id": "node/3371244619"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3428603553",
+        "barrier": "toll_booth",
+        "name": "Estación Peaje La Cumbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.0670771,
+          -33.3590815
+        ]
+      },
+      "id": "node/3428603553"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3428603554",
+        "barrier": "toll_booth",
+        "name": "Estación Peaje La Cumbre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.0671062,
+          -33.3591667
+        ]
+      },
+      "id": "node/3428603554"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3624016771",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2289416,
+          -31.5196751
+        ]
+      },
+      "id": "node/3624016771"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3624016772",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2288099,
+          -31.5197452
+        ]
+      },
+      "id": "node/3624016772"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4037556099",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso Villa La Ribera",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.8245123,
+          -32.6363371
+        ]
+      },
+      "id": "node/4037556099"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4037556102",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso Villa La Ribera",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.8244009,
+          -32.6363687
+        ]
+      },
+      "id": "node/4037556102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4041782099",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso Puerto San Martín",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7853027,
+          -32.6992688
+        ]
+      },
+      "id": "node/4041782099"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4320901008",
+        "barrier": "toll_booth",
+        "bicycle": "no",
+        "fee": "yes",
+        "foot": "no",
+        "horse": "no",
+        "motor_vehicle": "yes",
+        "name": "Peaje Jesús Maria",
+        "operator": "Camino de las Sierras"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.1531258,
+          -31.1907796
+        ]
+      },
+      "id": "node/4320901008"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4416977277",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.974089,
+          -31.635997
+        ]
+      },
+      "id": "node/4416977277"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4416977286",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.9742149,
+          -31.6365107
+        ]
+      },
+      "id": "node/4416977286"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4529296141",
+        "barrier": "toll_booth",
+        "name": "Arroyo Tegua"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.3505748,
+          -32.698954
+        ]
+      },
+      "id": "node/4529296141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4529296142",
+        "barrier": "toll_booth",
+        "name": "Arroyo Tegua"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.3507795,
+          -32.6990231
+        ]
+      },
+      "id": "node/4529296142"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4665585233",
+        "barrier": "toll_booth",
+        "name": "Peaje La Toma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.691222,
+          -33.120588
+        ]
+      },
+      "id": "node/4665585233"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4665585235",
+        "barrier": "toll_booth",
+        "name": "Peaje La Toma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.691332,
+          -33.1204731
+        ]
+      },
+      "id": "node/4665585235"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5067124256",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.3198342,
+          -31.3301815
+        ]
+      },
+      "id": "node/5067124256"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5067124257",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.3198523,
+          -31.3302415
+        ]
+      },
+      "id": "node/5067124257"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5706885925",
+        "barrier": "toll_booth",
+        "operator": "Corredor Cordobés"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2935871,
+          -32.1319733
+        ]
+      },
+      "id": "node/5706885925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5706885930",
+        "barrier": "toll_booth",
+        "operator": "Corredor Cordobés"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2937388,
+          -32.1321422
+        ]
+      },
+      "id": "node/5706885930"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6119665122",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.9264019,
+          -31.5469488
+        ]
+      },
+      "id": "node/6119665122"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6736596587",
+        "highway": "toll_gantry",
+        "name": "Pedagio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.1643014,
+          -33.1196743
+        ]
+      },
+      "id": "node/6736596587"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7141956670",
+        "barrier": "toll_booth",
+        "bicycle": "no",
+        "currency:ARS": "yes",
+        "foot": "no",
+        "motor_vehicle": "yes",
+        "name": "Cabina Peaje",
+        "payment:cash": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -66.2124413,
+          -33.2542802
+        ]
+      },
+      "id": "node/7141956670"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7221372206",
+        "alt_name": "Peaje Vial 4",
+        "barrier": "toll_booth",
+        "fee": "yes",
+        "lanes": "1",
+        "name": "Peaje Coronel Domínguez",
+        "official_name": "Corredor Vial N°4",
+        "opening_hours": "24/7",
+        "ref": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7203598,
+          -33.1563872
+        ]
+      },
+      "id": "node/7221372206"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8298507400",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -61.8864542,
+          -29.9460226
+        ]
+      },
+      "id": "node/8298507400"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8755566863",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso Villa La Ribera",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.8245766,
+          -32.6363189
+        ]
+      },
+      "id": "node/8755566863"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9501634315",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2189858,
+          -31.3115314
+        ]
+      },
+      "id": "node/9501634315"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12396584393",
+        "barrier": "toll_booth",
+        "operator": "Camino de las Sierras"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.4177534,
+          -31.7479831
+        ]
+      },
+      "id": "node/12396584393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12396584394",
+        "barrier": "toll_booth",
+        "operator": "Camino de las Sierras"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.4177095,
+          -31.7478595
+        ]
+      },
+      "id": "node/12396584394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12588810746",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.4738477,
+          -31.2987684
+        ]
+      },
+      "id": "node/12588810746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12588810747",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.4740508,
+          -31.2988339
+        ]
+      },
+      "id": "node/12588810747"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12871630430",
+        "barrier": "toll_booth",
+        "name": "Peaje La Toma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.6912765,
+          -33.120531
+        ]
+      },
+      "id": "node/12871630430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406019",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso San Lorenzo Sur",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7480512,
+          -32.7671747
+        ]
+      },
+      "id": "node/13043406019"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406020",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso San Lorenzo Sur",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7480005,
+          -32.7671826
+        ]
+      },
+      "id": "node/13043406020"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406021",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje Acceso San Lorenzo Sur",
+        "network": "Telepase",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7481516,
+          -32.7671592
+        ]
+      },
+      "id": "node/13043406021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406022",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje Acceso San Lorenzo Sur",
+        "network": "Telepase",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7478919,
+          -32.7671994
+        ]
+      },
+      "id": "node/13043406022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406063",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso San Lorenzo Centro",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7590563,
+          -32.7480987
+        ]
+      },
+      "id": "node/13043406063"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406064",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje Acceso San Lorenzo Centro",
+        "network": "Telepase",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7589462,
+          -32.7480606
+        ]
+      },
+      "id": "node/13043406064"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406065",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso San Lorenzo Centro",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7590986,
+          -32.7481133
+        ]
+      },
+      "id": "node/13043406065"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406078",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso San Lorenzo Norte",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7630781,
+          -32.7244796
+        ]
+      },
+      "id": "node/13043406078"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406079",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje Acceso San Lorenzo Norte",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7629963,
+          -32.7244396
+        ]
+      },
+      "id": "node/13043406079"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406080",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje Acceso San Lorenzo Norte",
+        "network": "Telepase",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7629459,
+          -32.724415
+        ]
+      },
+      "id": "node/13043406080"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13043406081",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje Acceso San Lorenzo Norte",
+        "network": "Telepase",
+        "operator": "Provincia de Santa Fe",
+        "operator:1994-2010": "AUFE",
+        "operator:2010-2017": "Unión Transitoria de Empresas (UTE) Consorcio Vial",
+        "operator:2017-2019": "ARSSA",
+        "operator:2019-2021": "Vial Santa Fe",
+        "operator:2021-03-31-": "Provincia de Santa Fe",
+        "operator:type": "government",
+        "payment:telepase": "yes",
+        "source_ref:toll": "https://autopista.santafe.gov.ar/cuadro.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7631167,
+          -32.7244984
+        ]
+      },
+      "id": "node/13043406081"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13164470568",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2290624,
+          -31.2800894
+        ]
+      },
+      "id": "node/13164470568"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13164470569",
+        "barrier": "toll_booth"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -64.2290855,
+          -31.2799982
+        ]
+      },
+      "id": "node/13164470569"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13444017745",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje RN9 - General Lagos",
+        "operator": "Corredores Viales",
+        "operator:type": "government",
+        "payment:telepase": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5782024,
+          -33.1289626
+        ]
+      },
+      "id": "node/13444017745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13444017746",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje RN9 - General Lagos",
+        "operator": "Corredores Viales",
+        "operator:type": "government",
+        "payment:telepase": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5779077,
+          -33.1287091
+        ]
+      },
+      "id": "node/13444017746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13444017747",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje RN9 - General Lagos",
+        "operator": "Corredores Viales",
+        "operator:type": "government",
+        "payment:telepase": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5781603,
+          -33.1289263
+        ]
+      },
+      "id": "node/13444017747"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13444017748",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje RN9 - General Lagos",
+        "operator": "Corredores Viales",
+        "operator:type": "government",
+        "payment:telepase": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5780853,
+          -33.1288619
+        ]
+      },
+      "id": "node/13444017748"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13444017749",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje RN9 - General Lagos",
+        "operator": "Corredores Viales",
+        "operator:type": "government",
+        "payment:telepase": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5780496,
+          -33.1288309
+        ]
+      },
+      "id": "node/13444017749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13444017750",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje RN9 - General Lagos",
+        "operator": "Corredores Viales",
+        "operator:type": "government",
+        "payment:telepase": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5779447,
+          -33.1287409
+        ]
+      },
+      "id": "node/13444017750"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13444017751",
+        "barrier": "toll_booth",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "name": "Peaje RN9 - General Lagos",
+        "operator": "Corredores Viales",
+        "operator:type": "government",
+        "payment:telepase": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.5780152,
+          -33.1288015
+        ]
+      },
+      "id": "node/13444017751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13444017759",
+        "currency:ARS": "yes",
+        "direction": "forward",
+        "highway": "toll_gantry",
+        "name": "Peaje RN9 - General Lagos",
+        "operator": "Corredores Viales",
+        "operator:type": "government",
+        "payment:telepase": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.577859,
+          -33.1286673
+        ]
+      },
+      "id": "node/13444017759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13539306765",
+        "alt_name": "Peaje Vial 4",
+        "barrier": "toll_booth",
+        "fee": "yes",
+        "lanes": "1",
+        "name": "Peaje Coronel Domínguez",
+        "official_name": "Corredor Vial N°4",
+        "opening_hours": "24/7",
+        "ref": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7204046,
+          -33.1563623
+        ]
+      },
+      "id": "node/13539306765"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13539306766",
+        "alt_name": "Peaje Vial 4",
+        "barrier": "toll_booth",
+        "fee": "yes",
+        "lanes": "1",
+        "name": "Peaje Coronel Domínguez",
+        "official_name": "Corredor Vial N°4",
+        "opening_hours": "24/7",
+        "ref": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.7202703,
+          -33.1564369
+        ]
+      },
+      "id": "node/13539306766"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13539306767",
+        "alt_name": "Peaje Vial 4",
+        "barrier": "toll_booth",
+        "fee": "yes",
+        "lanes": "1",
+        "name": "Peaje Coronel Domínguez",
+        "official_name": "Corredor Vial N°4",
+        "opening_hours": "24/7",
+        "ref": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -60.720315,
+          -33.1564121
+        ]
+      },
+      "id": "node/13539306767"
+    }
+  ]
+}
