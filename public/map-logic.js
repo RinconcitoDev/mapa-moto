@@ -176,55 +176,46 @@ map.on('click', (e) => {
   if (features.length) {
     const p = features[0].properties;
     const layerId = features[0].layer.id;
+    let titulo = "";
+    let contenido = "";
 
+    // --- 1. LÓGICA PARA PUNTOS DE INTERÉS (POIs) ---
     if (layerId === 'pois-viaje') {
       const tipo = p.amenity || p.shop || p.tourism || "Lugar de interés";
       const nombre = p.name || "Sin nombre registrado";
-
-      new maplibregl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(`
-        <div style="color:#000;">
-          <strong style="text-transform: uppercase;">📍 ${tipo.replace('_', ' ')}</strong><br>
-          ${nombre}
-        </div>
-      `)
-        .addTo(map);
-      return; // Evita que se ejecute la lógica de abajo si ya encontramos un POI
+      titulo = `📍 ${tipo.replace(/_/g, ' ')}`;
+      contenido = `<div style="margin-top:5px;">${nombre}</div>`;
     }
 
-    if (layerId === 'radares-circulo') {
+    // --- 2. LÓGICA PARA RADARES (Único con círculo de velocidad) ---
+    else if (layerId === 'radares-circulo') {
       titulo = "📷 CONTROL DE VELOCIDAD";
-
       const velBase = p.maxspeed ? p.maxspeed.toString().replace(" km/h", "") : "??";
       const operador = p.operator || p.source || "Control Vial";
-
-      // NUEVA LÓGICA AQUÍ: Convertimos los grados a texto cardinal
       const direccionTexto = gradosACardinal(p.direction);
       const sentido = direccionTexto ? `<br><b>Sentido:</b> ${direccionTexto}` : "";
 
       contenido = `
-    <div style="text-align:center; min-width:150px;">
-      <div style="
-        border: 5px solid #e74c3c; 
-        border-radius: 50%; 
-        width: 55px; height: 55px; 
-        margin: 10px auto; 
-        display: flex; align-items: center; justify-content: center;
-        color: #000; font-size: 22px; font-weight: bold;
-        background: #fff; box-shadow: 0 0 5px rgba(0,0,0,0.2);">
-        ${velBase}
-      </div>
-      <div style="font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Máxima Permitida</div>
-      <hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
-      <div style="font-size: 11px; text-align: left; color: #444; line-height: 1.4;">
-        <b>Ente:</b> ${operador}
-        ${sentido}
-      </div>
-    </div>
-  `;
-    } else {
-      // Lógica para Estaciones y Peajes
+        <div style="text-align:center; min-width:150px;">
+          <div style="
+            border: 5px solid #e74c3c; border-radius: 50%; 
+            width: 55px; height: 55px; margin: 10px auto; 
+            display: flex; align-items: center; justify-content: center;
+            color: #000; font-size: 22px; font-weight: bold;
+            background: #fff; box-shadow: 0 0 5px rgba(0,0,0,0.2);">
+            ${velBase}
+          </div>
+          <div style="font-size: 11px; color: #666; text-transform: uppercase;">Máxima Permitida</div>
+          <hr style="margin: 10px 0; border: 0; border-top: 1px solid #eee;">
+          <div style="font-size: 11px; text-align: left; color: #444;">
+            <b>Ente:</b> ${operador}
+            ${sentido}
+          </div>
+        </div>`;
+    }
+
+    // --- 3. LÓGICA PARA ESTACIONES Y PEAJES (Sin velocidad) ---
+    else {
       const isNafta = layerId.includes('nafta');
       titulo = p.name || p.nombre || (isNafta ? "⛽ Estación" : "🛣️ Peaje");
 
@@ -236,15 +227,17 @@ map.on('click', (e) => {
         contenido += `<div style="color:#27ae60; font-weight:bold; font-size:11px; margin-top:5px;">✅ ADMITE TELEPASE</div>`;
       }
 
-      // Agregamos un contenedor para que no se pegue al borde
-      contenido = `<div style="margin-top:5px;">${contenido}</div>`;
+      contenido = `<div style="margin-top:5px;">${contenido || 'Sin datos adicionales'}</div>`;
     }
 
+    // --- RENDERIZADO FINAL DEL POPUP ---
     new maplibregl.Popup({ offset: [0, -10] })
       .setLngLat(e.lngLat)
       .setHTML(`
-        <div style="color:#000; font-family: 'Segoe UI', Roboto, sans-serif; padding: 2px;">
-          <strong style="font-size:13px; display:block; border-bottom:1px solid #ccc; padding-bottom:5px;">${titulo}</strong>
+        <div style="color:#000; font-family: 'Segoe UI', sans-serif; padding: 2px;">
+          <strong style="font-size:13px; display:block; border-bottom:1px solid #ccc; padding-bottom:5px; text-transform: uppercase;">
+            ${titulo}
+          </strong>
           ${contenido}
         </div>
       `)
