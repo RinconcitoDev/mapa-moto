@@ -58,26 +58,20 @@ body {
 }
 
 /* Posiciones Verticales Corregidas */
-#recenter {
-  top: 15px;
-  background: #007cff;
-  color: white;
-}
-
 #rule-btn {
-  top: 80px;
+  top: 150px;
   background: #f1c40f;
   color: black;
 }
 
 #trip-btn {
-  top: 145px;
+  top: 215px;
   background: #222;
   border: 2px solid #fff;
 }
 
 #poi-btn {
-  top: 210px;
+  top: 280px;
   background: #2c3e50;
   color: white;
 }

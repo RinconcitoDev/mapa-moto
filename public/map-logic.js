@@ -8,7 +8,7 @@ let puntosRegla = [];
 let tripActive = false;
 let tripMaxSpeed = 0;
 let tripSpeeds = [];
-let tripStartCoords = null;
+let tripPath = [];
 let tripStartTime = "";
 let historyVisible = true;
 let markersHistory = [];
@@ -150,7 +150,78 @@ const map = new maplibregl.Map({
   zoom: 10
 });
 
-const marker = new maplibregl.Marker({ color: "#007cff", scale: 1.2 }).setLngLat(userPos).addTo(map);
+// Configuración del control nativo
+const geolocate = new maplibregl.GeolocateControl({
+  positionOptions: {
+    enableHighAccuracy: true,
+    timeout: 10000,
+    maximumAge: 0
+  },
+  trackUserLocation: true,
+  showUserHeading: true,
+  showUserLocation: true
+});
+
+map.addControl(geolocate);
+map.addControl(new maplibregl.NavigationControl(), 'top-right')
+
+// Sincronización del seguimiento
+geolocate.on('trackuserlocationstart', () => { followUser = true; });
+geolocate.on('trackuserlocationend', () => { followUser = false; });
+
+// EVENTO PRINCIPAL: Aquí vive la lógica de movimiento GPS y recorrido en tiempo real
+geolocate.on('geolocate', (e) => {
+  const { longitude, latitude, speed } = e.coords;
+  userPos = [longitude, latitude];
+
+  // Actualizar Velocidad (si el sensor la provee)
+  const kmh = speed ? Math.round(speed * 3.6) : 0;
+
+  if (tripActive) {
+    tripPath.push([...userPos]);
+    const source = map.getSource('recorrido-actual');
+    if (source) {
+      source.setData({ type: 'Feature', geometry: { type: 'LineString', coordinates: tripPath } });
+    }
+    if (kmh > tripMaxSpeed) tripMaxSpeed = kmh;
+    if (kmh > 5) tripSpeeds.push(kmh);
+
+    // Actualizar UI de viaje
+    const avg = tripSpeeds.length ? (tripSpeeds.reduce((a, b) => a + b, 0) / tripSpeeds.length).toFixed(0) : 0;
+    document.getElementById('max-display').innerText = `Máx: ${kmh} km/h`;
+    document.getElementById('avg-display').innerText = `P: ${avg} | M: ${tripMaxSpeed}`;
+  }
+
+  document.getElementById('coords-display').innerText = `LAT: ${latitude.toFixed(4)} | LON: ${longitude.toFixed(4)}`;
+
+  // Si el usuario no movió el mapa manualmente, lo seguimos
+  if (followUser) {
+    map.easeTo({ center: userPos, duration: 1000, easing: t => t });
+  }
+});
+
+// INICIALIZACIÓN DE CAPAS (AL CARGAR)
+map.on('load', () => {
+  geolocate.trigger();
+
+  // Fuente para la REGLA
+  if (!map.getSource('ruta-manual')) {
+    map.addSource('ruta-manual', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+    map.addLayer({
+      id: 'ruta-manual', type: 'line', source: 'ruta-manual',
+      paint: { 'line-color': '#f1c40f', 'line-width': 5, 'line-dasharray': [2, 1] }
+    });
+  }
+
+  // Fuente para el RECORRIDO DE LA MOTO
+  if (!map.getSource('recorrido-actual')) {
+    map.addSource('recorrido-actual', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
+    map.addLayer({
+      id: 'recorrido-actual', type: 'line', source: 'recorrido-actual',
+      paint: { 'line-color': '#007cff', 'line-width': 4 }
+    });
+  }
+});
 
 // --- LÓGICA DE CLIC (Restablecida al 100%) ---
 map.on('click', (e) => {
@@ -162,15 +233,15 @@ map.on('click', (e) => {
     });
     if (puntosRegla.length > 1) {
       document.getElementById('distancia-info').style.display = 'block';
-      document.getElementById('distancia-info').innerText = `${calcularDistancia(puntosRegla)} km`;
+      document.getElementById('distancia-info').innerText = `${calcularDistanciaNativa(puntosRegla)} km`;
     }
     return; // Si está la regla, no hacemos lo de abajo
   }
 
   // Buscamos en todas las capas de puntos a la vez
-  // Dentro de map.on('click')
+  const layers = ['nafta-circulo', 'peajes-circulo', 'radares-circulo', 'pois-viaje']
   const features = map.queryRenderedFeatures(e.point, {
-    layers: ['nafta-circulo', 'peajes-circulo', 'radares-circulo', 'pois-viaje'] // Añadido pois-viaje
+    layers: layers
   });
 
   if (features.length) {
@@ -246,22 +317,6 @@ map.on('click', (e) => {
 });
 
 // --- EL RESTO DE TUS FUNCIONES (GPS, HISTORIAL, ETC) SIN CAMBIOS ---
-navigator.geolocation.watchPosition(pos => {
-  const { latitude, longitude, speed } = pos.coords;
-  userPos = [longitude, latitude];
-  const kmh = speed ? Math.round(speed * 3.6) : 0;
-  if (tripActive) {
-    if (kmh > tripMaxSpeed) tripMaxSpeed = kmh;
-    if (kmh > 5) tripSpeeds.push(kmh);
-    const avg = tripSpeeds.length ? (tripSpeeds.reduce((a, b) => a + b, 0) / tripSpeeds.length).toFixed(0) : 0;
-    document.getElementById('max-display').innerText = `Máx: ${kmh} km/h`;
-    document.getElementById('avg-display').innerText = `P: ${avg} | M: ${tripMaxSpeed}`;
-  }
-  document.getElementById('coords-display').innerText = `LAT: ${latitude.toFixed(4)} | LON: ${longitude.toFixed(4)}`;
-  marker.setLngLat(userPos);
-  if (followUser) map.easeTo({ center: userPos, duration: 1000, easing: t => t });
-}, null, { enableHighAccuracy: true });
-
 function updateHistoryUI() {
   const list = document.getElementById('trip-list');
   const panel = document.getElementById('history-panel');
@@ -290,34 +345,66 @@ function updateHistoryUI() {
 
 function seleccionarTramo(index) {
   const t = history[index];
-  if (!t.start || !t.end) return;
 
-  // 1. Borramos los pines del tramo anterior
+  // Usamos 'path', que es el array con TODOS los puntos del recorrido
+  if (!t.path || t.path.length < 2) return;
+
+  // 1. Limpiamos pines de visualizaciones anteriores
   markersHistory.forEach(m => m.remove());
   markersHistory = [];
 
-  // 2. Creamos los nuevos pines para este tramo
+  // 2. Sacamos los puntos exactos de inicio y fin del trayecto real
+  const coordsInicio = t.path[0];
+  const coordsFin = t.path[t.path.length - 1];
+
+  // 3. Ponemos los marcadores (Salida y Llegada)
   const mInicio = new maplibregl.Marker({ color: '#27ae60', scale: 0.8 })
-    .setLngLat(t.start)
-    .setPopup(new maplibregl.Popup().setHTML("Salida"))
+    .setLngLat(coordsInicio)
+    .setPopup(new maplibregl.Popup().setHTML(`<b>Salida:</b> ${t.startTime}`))
     .addTo(map);
 
   const mFin = new maplibregl.Marker({ color: '#e74c3c', scale: 0.8 })
-    .setLngLat(t.end)
-    .setPopup(new maplibregl.Popup().setHTML("Llegada"))
+    .setLngLat(coordsFin)
+    .setPopup(new maplibregl.Popup().setHTML(`<b>Llegada:</b> ${t.endTime}`))
     .addTo(map);
 
-  // 3. Los guardamos en el array para poder borrarlos después
   markersHistory.push(mInicio, mFin);
 
-  // 4. Zoom al punto de inicio
-  map.flyTo({ center: t.start, zoom: 14 });
+  // 4. Dibujamos TODA la ruta (curvas, calles, todo) en el mapa
+  const source = map.getSource('recorrido-actual');
+  if (source) {
+    source.setData({
+      type: 'Feature',
+      geometry: { type: 'LineString', coordinates: t.path }
+    });
+  }
+
+  // 5. Encuadre automático: El mapa se mueve y hace zoom solo 
+  // para que veas el viaje completo de punta a punta en pantalla.
+  const bounds = t.path.reduce((acc, coord) => {
+    return acc.extend(coord);
+  }, new maplibregl.LngLatBounds(t.path[0], t.path[0]));
+
+  map.fitBounds(bounds, { padding: 50, duration: 1500 });
 }
 
 function eliminarTramo(index, event) {
   event.stopPropagation();
   if (confirm("¿Eliminar tramo?")) {
+    // 1. Lo borramos del array
     history.splice(index, 1);
+
+    // 2. Limpiamos los pines (marcadores verde/rojo)
+    markersHistory.forEach(m => m.remove());
+    markersHistory = [];
+
+    // 3. LIMPIAMOS LA LÍNEA DEL MAPA (El paso que faltaba)
+    const source = map.getSource('recorrido-actual');
+    if (source) {
+      source.setData({ type: 'FeatureCollection', features: [] });
+    }
+
+    // 4. Actualizamos la lista visual y el LocalStorage
     updateHistoryUI();
   }
 }
@@ -327,59 +414,50 @@ document.getElementById('trip-btn').addEventListener('click', () => {
   const btn = document.getElementById('trip-btn');
 
   if (tripActive) {
-    tripMaxSpeed = 0; tripSpeeds = []; tripStartCoords = [...userPos];
+    tripMaxSpeed = 0; tripSpeeds = []; tripPath = [[...userPos]];
     tripStartTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     btn.style.background = "#00ff00"; btn.innerText = "⏹️";
   } else {
     const tripEndTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    const tripEndCoords = [...userPos]; // Guardamos posición final
 
-    // Calculamos la distancia entre inicio y fin usando tu función existente
-    const dist = calcularDistancia([tripStartCoords, tripEndCoords]);
-
-    const avg = tripSpeeds.length ? (tripSpeeds.reduce((a, b) => a + b, 0) / tripSpeeds.length).toFixed(0) : 0;
-
-    if (tripMaxSpeed > 0) {
+    if (tripPath.length > 1) {
+      const avg = tripSpeeds.length ? (tripSpeeds.reduce((a, b) => a + b, 0) / tripSpeeds.length).toFixed(0) : 0;
       // Agregamos 'end' y 'distancia' al objeto que se guarda
       history.unshift({
         max: tripMaxSpeed,
         avg: avg,
         startTime: tripStartTime,
         endTime: tripEndTime,
-        start: tripStartCoords,
-        end: tripEndCoords,
-        distancia: dist
+        distancia: calcularDistanciaNativa(tripPath),
+        path: [...tripPath]
       });
       updateHistoryUI();
     }
+    const sourceRecorrido = map.getSource('recorrido-actual');
+    if (sourceRecorrido) sourceRecorrido.setData({ type: 'FeatureCollection', features: [] });
     btn.style.background = "#222"; btn.innerText = "🏁";
   }
 });
 
-document.getElementById('recenter').addEventListener('click', () => {
-  followUser = true; map.flyTo({ center: userPos, zoom: 14 });
-});
+function calcularDistanciaNativa(coords) {
+  if (coords.length < 2) return "0.00";
+  let total = 0;
+  for (let i = 0; i < coords.length - 1; i++) {
+    const p1 = new maplibregl.LngLat(coords[i][0], coords[i][1]);
+    const p2 = new maplibregl.LngLat(coords[i + 1][0], coords[i + 1][1]);
+    total += p1.distanceTo(p2);
+  }
+  return (total / 1000).toFixed(2);
+}
 
 document.getElementById('rule-btn').addEventListener('click', () => {
   modoRegla = !modoRegla;
+  puntosRegla = [];
+  const source = map.getSource('ruta-manual');
+  if (source) source.setData({ type: 'FeatureCollection', features: [] });
+  document.getElementById('distancia-info').style.display = 'none';
   document.getElementById('rule-btn').innerText = modoRegla ? '❌' : '📏';
-  if (!modoRegla) {
-    puntosRegla = [];
-    map.getSource('ruta-manual').setData({ type: 'FeatureCollection', features: [] });
-    document.getElementById('distancia-info').style.display = 'none';
-  }
 });
-
-function calcularDistancia(coords) {
-  let total = 0;
-  for (let i = 0; i < coords.length - 1; i++) {
-    const p1 = coords[i], p2 = coords[i + 1], R = 6371;
-    const dLat = (p2[1] - p1[1]) * Math.PI / 180, dLon = (p2[0] - p1[0]) * Math.PI / 180;
-    const a = Math.sin(dLat / 2) ** 2 + Math.cos(p1[1] * Math.PI / 180) * Math.cos(p2[1] * Math.PI / 180) * Math.sin(dLon / 2) ** 2;
-    total += R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  }
-  return total.toFixed(2);
-}
 
 function gradosACardinal(grados) {
   if (grados === undefined || grados === null || grados === "") return "";
@@ -415,5 +493,4 @@ document.getElementById('poi-btn').addEventListener('click', () => {
   document.getElementById('poi-btn').classList.toggle('btn-active', poisVisibles);
 });
 
-map.on('dragstart', () => { followUser = false; });
 updateHistoryUI();
