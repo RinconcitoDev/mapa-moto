@@ -1,28 +1,25 @@
+// Server sólo para DESARROLLO en la PC. En el celu la app corre como PWA
+// (GitHub Pages + archivo .pmtiles local), no hace falta este server.
 import express from "express";
-import path from 'path';
+import { existsSync } from "fs";
+import path from "path";
 import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const PMTILES = path.join(__dirname, "zona-mapa.pmtiles");
+const PORT = process.env.PORT || 3000;
 
 const app = express();
-const PORT = 3000;
 
-// Configuración de CORS reforzada para PMTiles y GeoJSON
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Range, Origin, X-Requested-With, Content-Type, Accept");
-  res.header("Access-Control-Expose-Headers", "Content-Range, Content-Length, Accept-Ranges");
-  next();
+// Sin CORS: la app y los datos están en el mismo origen, no hace falta abrirlo a "*".
+app.use(express.static(path.join(__dirname, "public")));
+
+// express.static/sendFile ya soportan peticiones Range, que es lo que usa PMTiles.
+app.get("/mapa.pmtiles", (req, res) => {
+  if (!existsSync(PMTILES)) return res.status(404).end();
+  res.sendFile(PMTILES);
 });
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/fonts', express.static(path.join(__dirname, 'fonts')));
-
-app.get('/mapa.pmtiles', (req, res) => {
-  res.sendFile(path.join(__dirname, 'zona-mapa.pmtiles'));
-});
-
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`🚀 Moto Map listo en: http://localhost:${PORT}`);
 });

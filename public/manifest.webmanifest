@@ -1,0 +1,16 @@
+{
+  "name": "Moto Map GPS",
+  "short_name": "Moto Map",
+  "description": "Mapa offline para viajes en moto: radares, peajes, estaciones y registro de tramos.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
