@@ -218,3 +218,56 @@ body {
   border: 2px solid;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+/* --- ESTADÍSTICAS (antes eran estilos inline) --- */
+#max-display { color: #00ff00; font-weight: bold; font-size: 20px; }
+#avg-display { color: #5dade2; font-size: 14px; font-weight: bold; }
+#coords-display { font-size: 10px; color: #888; margin-top: 8px; font-family: monospace; }
+
+/* La clase se usaba en el JS pero nunca estuvo definida: el toggle no hacía nada */
+.hidden-list { display: none; }
+
+#map-btn {
+  top: 345px;
+  background: #2c3e50;
+  color: white;
+}
+
+/* Que la UI no quede debajo del notch / barra de gestos */
+#ui-container { bottom: calc(25px + env(safe-area-inset-bottom)); max-width: calc(100vw - 100px); }
+
+/* --- POPUPS --- */
+.popup { color: #000; font-family: 'Segoe UI', sans-serif; padding: 2px; }
+.popup-titulo { font-size: 13px; display: block; border-bottom: 1px solid #ccc; padding-bottom: 5px; text-transform: uppercase; }
+.radar-popup { text-align: center; min-width: 150px; }
+.radar-velocidad {
+  border: 5px solid #e74c3c; border-radius: 50%;
+  width: 55px; height: 55px; margin: 10px auto;
+  display: flex; align-items: center; justify-content: center;
+  color: #000; font-size: 22px; font-weight: bold; background: #fff;
+}
+.radar-label { font-size: 11px; color: #666; text-transform: uppercase; }
+.radar-popup hr { margin: 10px 0; border: 0; border-top: 1px solid #eee; }
+.radar-detalle { font-size: 11px; text-align: left; color: #444; }
+
+/* --- PANTALLA DE CARGA DEL MAPA --- */
+#map-setup {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+#map-setup[hidden] { display: none; }
+.map-setup-card {
+  background: #151515; border: 1px solid #333; border-radius: 16px;
+  padding: 24px; max-width: 360px; text-align: center; line-height: 1.4;
+}
+.map-setup-card h2 { margin-top: 0; }
+.map-setup-card p { color: #bbb; font-size: 14px; }
+.map-setup-btn {
+  display: inline-block; margin-top: 10px; padding: 14px 28px;
+  background: #f1c40f; color: #000; font-weight: bold;
+  border-radius: 30px; cursor: pointer;
+}
+#map-setup-status { margin-top: 14px; color: #00ff00; font-family: monospace; min-height: 1em; }
+#map-setup-cancel { margin-top: 10px; background: none; border: none; color: #888; font-size: 13px; }

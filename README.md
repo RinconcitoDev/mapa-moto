@@ -13,19 +13,37 @@ Un tablero de instrumentos y mapa táctico diseñado para viajes en moto, optimi
     - 🛠️ Talleres mecánicos y repuestos
     - 🏕️ Campings y Miradores
 - **Estadísticas en Vivo:** Velocidad máxima y promedio en tiempo real mediante GPS.
+- **Pantalla siempre encendida** mientras hay un tramo en curso (Wake Lock).
 
-## 🛠️ Instalación y Uso
-1. Clona este repositorio.
-2. Asegúrate de tener los siguientes archivos en la raíz:
-    - `basemap.pmtiles` (Mapa base)
-    - `radares.geojson` (Datos de radares)
-3. Ejecuta un servidor local (ej: `npx serve` o usando la extensión *Live Server* de VS Code).
-4. Accede desde tu móvil mediante la IP local de tu red WiFi.
+## 📱 Instalar en el celu (sin Termux)
+La app es una **PWA**: se publica en GitHub Pages (HTTPS, que el GPS exige) y se instala como app.
+El mapa `.pmtiles` **nunca se sube**: se elige desde el teléfono y queda en el almacenamiento
+privado del navegador (OPFS). Después de la primera vez funciona sin internet.
 
-## 📱 Optimización Móvil
-Para un rendimiento óptimo en ruta:
-- Usa navegadores que soporten `MapLibre GL JS`.
-- **Importante:** El acceso al GPS requiere conexión segura (HTTPS) o configurar el navegador para permitir orígenes inseguros en pruebas locales.
+1. Copiá tu `zona-mapa.pmtiles` al celu (cable USB, Drive, etc. — por ejemplo a `Descargas`).
+2. Abrí en Chrome `https://<usuario>.github.io/mapa-moto/`.
+3. Menú ⋮ → **Instalar app** (o "Agregar a pantalla principal").
+4. Abrila desde el ícono → **Elegir archivo** → tu `.pmtiles`. Se copia una sola vez.
+5. Aceptá el permiso de ubicación. Listo: ya podés borrar el `.pmtiles` de Descargas.
+
+Para cambiar de mapa más adelante: botón 🗺️.
+
+### Privacidad
+- Sin CDNs, sin analytics, sin APIs externas: todo (MapLibre, fuentes, datos) se sirve desde la propia app.
+- Una CSP (`default-src 'self'`) impide que la página se conecte a cualquier otro dominio.
+- El historial de tramos y el mapa quedan sólo en el teléfono.
+
+## 🛠️ Desarrollo en la PC
+```bash
+pnpm install
+# opcional: poné zona-mapa.pmtiles en la raíz para no tener que elegirlo
+pnpm start            # http://localhost:3000
+```
+Datos de OSM: después de exportar de overpass-turbo, adelgazalos con
+`node scripts/slim-geojson.mjs` (deja sólo las propiedades que usa la app).
+
+Al cambiar archivos de `public/`, subí `VERSION` en `public/sw.js` para que los
+celulares instalados descarguen la versión nueva.
 
 ---
 Desarrollado para motociclistas que buscan simplicidad y datos útiles sin distracciones.

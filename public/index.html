@@ -3,29 +3,38 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>Moto Map GPS</title>
-  <script src="lib/maplibre-gl.js"></script>
+  <!-- Sin conexiones externas: sólo se permite cargar cosas de este mismo origen -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; worker-src 'self' blob:; connect-src 'self' pmtiles: blob: data:; object-src 'none'; base-uri 'self'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#080808">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <link href="lib/maplibre-gl.css" rel="stylesheet" />
-  <script src="lib/pmtiles.js"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="lib/maplibre-gl.js" defer></script>
+  <script src="lib/pmtiles.js" defer></script>
+  <script src="map-logic.js" defer></script>
 </head>
 
 <body>
   <div id="distancia-info">0.00 km</div>
 
-  <button id="rule-btn" class="btn-side">📏</button>
-  <button id="trip-btn" class="btn-side">🏁</button>
-  <button id="poi-btn" class="btn-side" title="Mostrar lugares de interés">📍</button>
+  <button id="rule-btn" class="btn-side" aria-label="Regla">📏</button>
+  <button id="trip-btn" class="btn-side" aria-label="Iniciar/terminar tramo">🏁</button>
+  <button id="poi-btn" class="btn-side" aria-label="Lugares de interés">📍</button>
+  <button id="map-btn" class="btn-side" aria-label="Cambiar archivo de mapa">🗺️</button>
 
   <div id="ui-container">
     <div id="live-stats">
       <div style="display:flex; justify-content: space-between; align-items: center;">
-        <span id="max-display" style="color:#00ff00; font-weight:bold; font-size:20px;">Máx: 0 km/h</span>
-        <span id="avg-display" style="color:#5dade2; font-size:14px; font-weight: bold;">Prom: 0 km/h</span>
+        <span id="max-display">0 km/h</span>
+        <span id="avg-display"></span>
       </div>
-      <div id="coords-display" style="font-size:10px; color:#888; margin-top:8px; font-family: monospace;">GPS: Buscando
-        señal...</div>
+      <div id="coords-display">GPS: Buscando señal...</div>
     </div>
     <div id="history-panel">
       <div id="history-header">
@@ -38,7 +47,19 @@
 
   <div id="map"></div>
 
-  <script src="map-logic.js"></script>
+  <div id="map-setup" hidden>
+    <div class="map-setup-card">
+      <h2>🗺️ Elegí tu mapa</h2>
+      <p>Seleccioná el archivo <code>.pmtiles</code> que tenés en el celu.
+        Se copia una sola vez al almacenamiento privado de la app y no sale del teléfono.</p>
+      <label class="map-setup-btn">
+        Elegir archivo
+        <input id="map-input" type="file" hidden>
+      </label>
+      <div id="map-setup-status"></div>
+      <button id="map-setup-cancel" type="button">Cancelar</button>
+    </div>
+  </div>
 </body>
 
 </html>

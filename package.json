@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Dashboard táctico offline para viajes en moto",
-  "main": "map-logic.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "npx serve ."
+    "dev": "node --watch server.js"
   },
   "keywords": ["maplibre", "moto", "gps", "offline"],
   "author": "",
