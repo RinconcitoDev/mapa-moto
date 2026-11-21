@@ -13,7 +13,12 @@ const MAP_FILE = 'mapa.pmtiles';
 const MIN_STEP_M = 10; // no guardamos puntos del recorrido a menos de 10 m del anterior
 
 let map;
-let userPos = [-60.63, -32.94];
+// Centro inicial: la última posición guardada EN EL CELU; si no hay, Argentina entera.
+// Así el código público no revela la zona de quien lo usa.
+const ultimaPos = (() => {
+  try { return JSON.parse(localStorage.getItem('motoLastPos')); } catch { return null; }
+})();
+let userPos = ultimaPos || [-64, -38];
 let followUser = true;
 let modoRegla = false;
 let puntosRegla = [];
@@ -232,7 +237,7 @@ function iniciarMapa(basemapUrl) {
     container: 'map',
     style: crearEstilo(basemapUrl),
     center: userPos,
-    zoom: 10,
+    zoom: ultimaPos ? 10 : 4,
     attributionControl: { compact: true, customAttribution: '© OpenStreetMap' }
   });
 
@@ -257,6 +262,7 @@ function iniciarMapa(basemapUrl) {
 function onPosicion(e) {
   const { longitude, latitude, speed } = e.coords;
   userPos = [longitude, latitude];
+  localStorage.setItem('motoLastPos', JSON.stringify([round5(longitude), round5(latitude)]));
   const kmh = speed ? Math.round(speed * 3.6) : 0;
 
   document.getElementById('max-display').textContent = `${kmh} km/h`;
